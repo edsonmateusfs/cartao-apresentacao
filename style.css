@@ -1,0 +1,73 @@
+/* ESTILOS GERAIS DO CARTÃO */
+.cartao {
+  width: 300px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* ESTILO DA FOTO (100x100px REDONDA) */
+.cartao img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block; /* Remove espaços fantasmas */
+  margin: 0 auto 15px; /* Centraliza e dá espaço abaixo */
+}
+
+/* BOTÕES */
+button {
+  background: #6e48aa;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+/* LINKS (GitHub/LinkedIn) */
+.links a {
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 8px 15px;
+  background: #0077b5;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.links a:first-child {
+  background: #333;
+}
+
+/* EFEITOS HOVER */
+.links a:hover {
+  background: #6e48aa;
+  transform: translateY(-3px);
+}
+
+button:hover {
+  background: #5a3696;
+}
+
+.cartao img:hover {
+  transform: scale(1.05);
+}
+/* ESTILO DO MODO NOTURNO */
+.cartao.noturno {
+  background: #222;          /* Fundo escuro */
+  color: white;              /* Texto branco */
+}
+
+.cartao.noturno button {
+  background: #6e48aa;       /* Cor roxa nos botões */
+}
+.cartao {
+  font-family: Arial; /* Fonte padrão */
+  transition: all 0.3s; /* Efeito suave */
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meu Cartão Digital</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cartao">
+    <img src="minha-foto.jpg" alt="Minha Foto"> <!-- ÚNICA tag img -->
+    <h1>Edson Mateus</h1>
+    <p>Aspirante a Dev Frontend</p>
+    <div class="links">
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+    </div>
+    <!-- BOTÕES DENTRO DO CARTÃO -->
+    <button id="modoNoturno">🌙 Modo Noturno</button>
+    <button id="toggleFoto">👁️ Mostrar/Esconder Foto</button>
+    <button id="mudaFonte">✏️ Alterar Fonte</button>
+  </div>
+
+  <script>
+    // Botão do modo noturno
+    document.getElementById("modoNoturno").addEventListener("click", function() {
+  const cartao = document.querySelector(".cartao");
+  cartao.classList.toggle("noturno"); // Alterna a classe "noturno"
+});
+
+    // Botão que mostra/esconde a foto
+    document.getElementById("toggleFoto").addEventListener("click", function() {
+      const foto = document.querySelector(".cartao img");
+      foto.style.display = (foto.style.display === "none") ? "block" : "none";
+    });
+    document.getElementById("mudaFonte").addEventListener("click", function() {
+  const cartao = document.querySelector(".cartao");
+  
+  // Alterna entre 'Arial' e 'Courier New'
+  if (cartao.style.fontFamily === 'Courier New') {
+    cartao.style.fontFamily = 'Arial';
+  } else {
+    cartao.style.fontFamily = 'Courier New';
+    cartao.style.fontWeight = 'bold'; // Opcional: deixa em negrito
+  }
+});
+  </script>
+</body>
+</html>
